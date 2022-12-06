@@ -22,13 +22,14 @@ const ObjFilter = () => {
     return (
         <FormControl fullWidth>
             <InputLabel id="objective-input">Objective</InputLabel>
+            {/* <InputLabel id="objective-input">Goal</InputLabel> */}
             <Select
                 labelId="objective"
                 id="objective-input-label"
+                label="objective"
                 multiple
                 value={objective}
                 input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
-                label="Objective"
                 onChange={handleChange}
                 renderValue={(selected) => (
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>

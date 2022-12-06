@@ -1,7 +1,32 @@
 import './style-filter.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
+import { useState } from 'react'
+
+const styles = [
+    'All',
+    'Ashtanga',
+    'Facial',
+    'Hatha',
+    'Integral',
+    'Iyengar',
+    'Jivamukti',
+    'Meditation',
+    'Power',
+    'Philosophy',
+    'Pregnant',
+    'Rocket',
+    'Vinyasa',
+    'Yin'
+]
 
 const StyleFilter = () => {
+
+    const [style, setStyle] = useState("")
+
+    const handleChange = (event) => {
+        const { value } = event.target
+        setStyle(value)
+    }
 
     return (
         <FormControl fullWidth>
@@ -10,21 +35,24 @@ const StyleFilter = () => {
                 labelId="style"
                 id="style-input-label"
                 label="Style"
-            // onChange={handleChange}
+                value={style}
+                onChange={handleChange}
             >
-                <MenuItem value={1}>Ashtanga</MenuItem>
-                <MenuItem value={2}>Facial</MenuItem>
-                <MenuItem value={3}>Hatha</MenuItem>
-                <MenuItem value={4}>Integral</MenuItem>
-                <MenuItem value={5}>Iyengar</MenuItem>
-                <MenuItem value={6}>Jivamukti</MenuItem>
-                <MenuItem value={7}>Meditation</MenuItem>
-                <MenuItem value={8}>Power</MenuItem>
-                <MenuItem value={9}>Philosophy</MenuItem>
-                <MenuItem value={10}>Pregnant</MenuItem>
-                <MenuItem value={11}>Rocket</MenuItem>
-                <MenuItem value={12}>Vinyasa</MenuItem>
-                <MenuItem value={13}>Yin</MenuItem>
+                {styles.map(elm => <MenuItem value={elm} key={elm}>{elm}</MenuItem>)}
+                {/* <MenuItem value="All">All</MenuItem>
+                <MenuItem value="Ashtanga">Ashtanga</MenuItem>
+                <MenuItem value="Facial">Facial</MenuItem>
+                <MenuItem value="Hatha">Hatha</MenuItem>
+                <MenuItem value="Integral">Integral</MenuItem>
+                <MenuItem value="Iyengar">Iyengar</MenuItem>
+                <MenuItem value="Jivamukti">Jivamukti</MenuItem>
+                <MenuItem value="Meditation">Meditation</MenuItem>
+                <MenuItem value="Power">Power</MenuItem>
+                <MenuItem value="Philosophy">Philosophy</MenuItem>
+                <MenuItem value="Pregnant">Pregnant</MenuItem>
+                <MenuItem value="Rocket">Rocket</MenuItem>
+                <MenuItem value="Vinyasa">Vinyasa</MenuItem>
+                <MenuItem value="Yin">Yin</MenuItem> */}
             </Select>
         </FormControl>
     )

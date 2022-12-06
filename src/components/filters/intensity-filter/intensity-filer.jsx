@@ -1,7 +1,15 @@
 import './intensity-filter.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
+import { useState } from 'react'
 
 const IntensityFilter = () => {
+
+    const [intensity, setIntensity] = useState("")
+
+    const handleChange = (event) => {
+        const { value } = event.target
+        setIntensity(value)
+    }
 
     return (
         <FormControl fullWidth>
@@ -10,11 +18,12 @@ const IntensityFilter = () => {
                 labelId="intensity"
                 id="intensity-input-label"
                 label="intensity"
-            // onChange={handleChange}
+                value={intensity}
+                onChange={handleChange}
             >
-                <MenuItem value={1}>Low</MenuItem>
-                <MenuItem value={2}>Medium</MenuItem>
-                <MenuItem value={3}>High</MenuItem>
+                <MenuItem value="L">Low</MenuItem>
+                <MenuItem value="M">Medium</MenuItem>
+                <MenuItem value="H">High</MenuItem>
             </Select>
         </FormControl>
     )
