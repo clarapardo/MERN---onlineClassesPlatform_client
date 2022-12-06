@@ -2,13 +2,14 @@ import './level-filter.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
 import { useState } from 'react'
 
-const LevelFilter = () => {
+const LevelFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [level, setLevel] = useState("");
 
     const handleChange = (event) => {
         const { value } = event.target
         setLevel(value)
+        setFiltersInputs({ ...filtersInputs, level: value })
     }
 
 

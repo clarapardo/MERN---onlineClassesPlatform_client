@@ -19,13 +19,14 @@ const styles = [
     'Yin'
 ]
 
-const StyleFilter = () => {
+const StyleFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [style, setStyle] = useState("")
 
     const handleChange = (event) => {
         const { value } = event.target
         setStyle(value)
+        setFiltersInputs({ ...filtersInputs, style: value })
     }
 
     return (

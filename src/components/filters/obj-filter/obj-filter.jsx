@@ -10,13 +10,15 @@ const objectives = [
     'Relaxation',
 ]
 
-const ObjFilter = () => {
+const ObjFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [objective, setObjectives] = useState([]);
 
     const handleChange = (event) => {
         const { value } = event.target
-        setObjectives(typeof value === 'string' ? value.split(',') : value)
+        const newSate = typeof value === 'string' ? value.split(',') : value
+        setObjectives(newSate)
+        setFiltersInputs({ ...filtersInputs, objective: newSate })
     }
 
     return (

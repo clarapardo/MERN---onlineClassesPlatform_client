@@ -6,7 +6,7 @@ function valueLabelFormat(value) {
     return `${value}m`;
 }
 
-const DurationFilter = () => {
+const DurationFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [timeValue, settimeValue] = useState([5, 45])
     const minDistance = 10
@@ -18,8 +18,10 @@ const DurationFilter = () => {
 
         if (activeThumb === 0) {
             settimeValue([Math.min(newValue[0], timeValue[1] - minDistance), timeValue[1]])
+            setFiltersInputs({ ...filtersInputs, duration: [Math.min(newValue[0], timeValue[1] - minDistance), timeValue[1]] })
         } else {
             settimeValue([timeValue[0], Math.max(newValue[1], timeValue[0] + minDistance)])
+            setFiltersInputs({ ...filtersInputs, duration: [timeValue[0], Math.max(newValue[1], timeValue[0] + minDistance)] })
         }
     }
 

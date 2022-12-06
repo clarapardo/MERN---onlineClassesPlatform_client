@@ -2,13 +2,14 @@ import './intensity-filter.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
 import { useState } from 'react'
 
-const IntensityFilter = () => {
+const IntensityFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [intensity, setIntensity] = useState("")
 
     const handleChange = (event) => {
         const { value } = event.target
         setIntensity(value)
+        setFiltersInputs({ ...filtersInputs, intensity: value })
     }
 
     return (
