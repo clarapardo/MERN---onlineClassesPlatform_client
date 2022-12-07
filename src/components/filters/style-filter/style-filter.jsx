@@ -1,6 +1,6 @@
 import './style-filter.css'
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const styles = [
     'All',
@@ -23,9 +23,12 @@ const StyleFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     const [style, setStyle] = useState("")
 
+    useEffect(() => {
+        setStyle(filtersInputs.style);
+    }, [filtersInputs])
+
     const handleChange = (event) => {
         const { value } = event.target
-        setStyle(value)
         setFiltersInputs({ ...filtersInputs, style: value })
     }
 

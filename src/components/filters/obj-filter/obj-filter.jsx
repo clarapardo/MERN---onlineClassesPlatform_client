@@ -1,6 +1,6 @@
 import './obj-filter.css'
 import { FormControl, InputLabel, Select, MenuItem, OutlinedInput, Chip, Box } from '@mui/material'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const objectives = [
@@ -12,12 +12,15 @@ const objectives = [
 
 const ObjFilter = ({ filtersInputs, setFiltersInputs }) => {
 
-    const [objective, setObjectives] = useState([]);
+    const [objective, setObjectives] = useState([])
+
+    useEffect(() => {
+        setObjectives(filtersInputs.objective);
+    }, [filtersInputs])
 
     const handleChange = (event) => {
         const { value } = event.target
         const newSate = typeof value === 'string' ? value.split(',') : value
-        setObjectives(newSate)
         setFiltersInputs({ ...filtersInputs, objective: newSate })
     }
 

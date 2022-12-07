@@ -12,10 +12,10 @@ import { useState } from 'react'
 const AllPrograms = () => {
 
     const [filtersInputs, setFiltersInputs] = useState({
-        objective: "",
+        objective: [],
         level: "",
         duration: [5, 45],
-        style: "All",
+        style: "",
         intensity: ""
     })
 
@@ -25,13 +25,12 @@ const AllPrograms = () => {
 
     const resetState = () => {
         setFiltersInputs({
-            objective: "",
+            objective: [],
             level: "",
             duration: [5, 45],
-            style: "All",
+            style: "",
             intensity: ""
         })
-        // Aqui hay que limpiar los campos de los filtros :S
     }
 
     return (
@@ -42,6 +41,7 @@ const AllPrograms = () => {
                     <Container>
                         <h2>Barra buscadora</h2>
                         <p onClick={resetState}>Reset filters</p>
+
                         <ObjFilter filtersInputs={filtersInputs} setFiltersInputs={setFiltersInputs}></ObjFilter>
                         <LevelFilter filtersInputs={filtersInputs} setFiltersInputs={setFiltersInputs}></LevelFilter>
                         <DurationFilter filtersInputs={filtersInputs} setFiltersInputs={setFiltersInputs}></DurationFilter>
@@ -50,6 +50,8 @@ const AllPrograms = () => {
                     </Container>
                 </Grid>
                 <Grid xs={9}>
+                    <p>Mostrando 78 programas</p>
+                    <p>Ordenar por: recomendado &gt;</p>
                     {/* <Item>xs=8</Item> */}
                 </Grid>
             </Grid>
