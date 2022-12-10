@@ -1,0 +1,13 @@
+.search-results-header {
+    display: flex;
+}
+
+.search-results-header p {
+    margin-right: 20px;
+}
+
+
+.filters-container>div,
+.filters-container>span {
+    margin-bottom: 20px;
+}
