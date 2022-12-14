@@ -1,0 +1,41 @@
+.durationFilter-container {
+    border-radius: 4px;
+    border: 1px solid #9ebd0c;
+    padding: 4.5px 14px;
+}
+
+.durationFilter-container>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.durationFilter-container>div>p {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.durationFilter-container>div>span {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.durationFilter-container>span {
+    /* color: #9E829C !important; */
+    color: #C2E812 !important;
+    /* color: #EE7B30 !important; */
+    height: 2px !important;
+}
+
+.durationFilter-container>span .MuiSlider-thumb {
+    width: 15px;
+    height: 15px;
+}
+
+.durationFilter-container>span .MuiSlider-thumb.Mui-focusVisible {
+    box-shadow: 0px 0px 0px 8px rgb(219, 112, 147, 0.25) !important;
+}

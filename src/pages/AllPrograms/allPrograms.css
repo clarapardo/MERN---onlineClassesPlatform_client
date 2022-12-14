@@ -1,5 +1,12 @@
+.AllPrograms {
+    font-family: "Julius Sans One", sans-serif;
+}
+
 .search-results-header {
     display: flex;
+    justify-content: flex-end;
+    color: #9b9999;
+    font-size: 14px;
 }
 
 .search-results-header p {
@@ -10,4 +17,49 @@
 .filters-container>div,
 .filters-container>span {
     margin-bottom: 20px;
+    background-color: white;
+}
+
+.reset-filters {
+    font-size: 13px;
+    color: #9ebd0c;
+    cursor: pointer;
+    width: max-content;
+    margin-left: auto
+}
+
+.reset-filters:hover {
+    color: #226F54
+}
+
+.logo {
+    width: 70%;
+    /* width: 150px; */
+    /* height: 150px; */
+    scale: 1.5;
+    margin: 20px 0px;
+}
+
+.header-title {
+    text-align: center;
+    /* font-size: 22px; */
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        "Noto Sans",
+        "Liberation Sans",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.header-subtitle {
+    text-align: center;
+    color: #9b9999;
+    margin-bottom: 35px;
 }

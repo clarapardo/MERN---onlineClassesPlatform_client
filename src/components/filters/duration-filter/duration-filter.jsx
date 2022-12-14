@@ -28,17 +28,24 @@ const DurationFilter = ({ filtersInputs, setFiltersInputs }) => {
     }
 
     return (
-        <Slider
-            getAriaLabel={() => 'Minimum distance'}
-            value={timeValue}
-            valueLabelDisplay="on"
-            disableSwap
-            min={5}
-            max={80}
-            step={5}
-            onChange={handleChange1}
-            valueLabelFormat={valueLabelFormat}
-        />
+        <div className='durationFilter-container'>
+            <div>
+                <p>Duration:</p>
+                <span>{timeValue[0]} - {timeValue[1]} mins</span>
+            </div>
+
+            <Slider
+                getAriaLabel={() => 'Minimum distance'}
+                value={timeValue}
+                valueLabelDisplay="off"
+                disableSwap
+                min={5}
+                max={80}
+                step={5}
+                onChange={handleChange1}
+                valueLabelFormat={valueLabelFormat}
+            />
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
 import './card.css'
-import { Card, CardMedia, CardContent, Typography, CardActionArea } from '@mui/material'
+import { Card, CardMedia, CardContent, Typography, CardActionArea, Chip } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 const CardItem = ({ data }) => {
 
-    const { _id, name, videoCover, style, level, intensity } = data
+    const { _id, name, videoCover, style, level, intensity, duration } = data
 
 
     const getLevel = (number) => {
@@ -20,14 +20,15 @@ const CardItem = ({ data }) => {
 
     return (
         <Link to={`/${_id}`} className="card-link-container">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345 }} className="CardItem">
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="180"
+                        height="160"
                         image={videoCover}
                         alt="green iguana"
                     />
+                    <Chip label={`${duration} min`} size="small" className="duration-chip"/>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">{name}</Typography>
                         <Typography variant="body2" color="text.secondary">

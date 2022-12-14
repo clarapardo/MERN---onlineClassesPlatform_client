@@ -1,0 +1,7 @@
+.filters-container label.Mui-focused {
+    color: #9ebd0c !important
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #9ebd0c !important
+}

@@ -15,7 +15,6 @@ const LevelFilter = ({ filtersInputs, setFiltersInputs }) => {
         setFiltersInputs({ ...filtersInputs, level: value })
     }
 
-
     return (
         <FormControl fullWidth>
             <InputLabel id="level-input">Level</InputLabel>

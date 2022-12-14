@@ -26,12 +26,12 @@ const ObjFilter = ({ filtersInputs, setFiltersInputs }) => {
 
     return (
         <FormControl fullWidth>
-            <InputLabel id="objective-input">Objective</InputLabel>
+            <InputLabel id="objective-input">Goal</InputLabel>
             {/* <InputLabel id="objective-input">Goal</InputLabel> */}
             <Select
-                labelId="objective"
+                labelId="Goal"
                 id="objective-input-label"
-                label="objective"
+                label="goal"
                 multiple
                 value={objective}
                 input={<OutlinedInput id="select-multiple-chip" label="Chip" />}

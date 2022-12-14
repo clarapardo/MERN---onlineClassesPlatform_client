@@ -1,3 +1,35 @@
 .card-link-container {
     text-decoration: none;
 }
+
+.CardItem .MuiTypography-h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+
+    white-space: nowrap;
+    /* width: 100%; */
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.CardItem .MuiTypography-body2 {
+    text-align: center;
+}
+
+.CardItem {
+    border-radius: 0 !important;
+    margin: 10px;
+    box-shadow: none !important;
+}
+
+.duration-chip {
+    border-radius: 3px !important;
+    position: absolute;
+    right: 6px;
+    top: 130px;
+    color: white !important;
+    background-color: rgb(0 0 0 / 48%) !important
+}
