@@ -1,6 +1,6 @@
 import './allPrograms.css'
 import './../../components/filters/filter.css'
-import { Grid, Container } from '@mui/material'
+import { Grid, Container, InputLabel, MenuItem, FormControl, Select } from '@mui/material'
 import { useState, useEffect } from 'react'
 
 import ObjFilter from '../../components/filters/obj-filter/obj-filter'
@@ -29,6 +29,7 @@ const AllPrograms = () => {
     const [classes, setClasses] = useState([])
     const [classesCopy, setClassesCopy] = useState([])
     const [searchBarValue, setSerchBarValue] = useState('')
+    const [sortBy, setSortBy] = useState(1)
 
 
     useEffect((() => {
@@ -38,6 +39,10 @@ const AllPrograms = () => {
     useEffect((() => {
         handleSearch()
     }), [classes, searchBarValue])
+
+    useEffect((() => {
+        handleSortBy()
+    }), [classesCopy])
 
 
     const handleInputsChange = () => {
@@ -50,9 +55,35 @@ const AllPrograms = () => {
     const handleSearch = () => {
         if (searchBarValue !== '') {
             const classesSearch = classes.filter(elm => elm.name.toLowerCase().includes(searchBarValue.toLowerCase()))
+            setSortBy(1)
             setClassesCopy(classesSearch)
         } else {
+            setSortBy(1)
             setClassesCopy(classes)
+        }
+    }
+
+    const handleSortBy = (event) => {
+        let auxValue
+        if (!event) {
+            auxValue = sortBy
+        } else {
+            auxValue = event.target.value
+            setSortBy(event.target.value)
+        }
+
+        if (auxValue === 1) {
+            // recomended
+            classesCopy.sort((a, b) => Date.parse(a.createdAt) - Date.parse(b.createdAt))
+        } else if (auxValue === 2) {
+            // lenght
+            classesCopy.sort((a, b) => b.duration - a.duration)
+        } else if (auxValue === 3) {
+            // newest
+            classesCopy.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
+        } else if (auxValue === 4) {
+            // alphabetically
+            classesCopy.sort((a, b) => a.name.localeCompare(b.name))
         }
     }
 
@@ -81,7 +112,19 @@ const AllPrograms = () => {
                     <p className='header-subtitle'>Choose your goal, level, type of yoga, duration and intensity.</p>
                     <div className='search-results-header'>
                         <p>Showing {classesCopy.length} programs</p>
-                        <p>Sort by: recommended &gt;</p>
+                        <p>Sort by: </p>
+
+                        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} className="sortBy-dropdown">
+                            <InputLabel id="demo-simple-select-standard-label"></InputLabel>
+                            <Select labelId="sortBy" id="sortBy" value={sortBy} onChange={handleSortBy} label="sortBy">
+                                <MenuItem value={1}>recommended</MenuItem>
+                                <MenuItem value={2}>lenght</MenuItem>
+                                <MenuItem value={3}>newest</MenuItem>
+                                <MenuItem value={4}>name</MenuItem>
+                            </Select>
+                        </FormControl>
+
+
                     </div>
                     <Grid container>
                         {classesCopy.map(elm => <Grid xs={3} key={`${elm._id}`} > <CardItem data={elm}></CardItem></Grid>)}
