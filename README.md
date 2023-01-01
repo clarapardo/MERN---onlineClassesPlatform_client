@@ -33,7 +33,7 @@ The *frameworks*, *libraries*, and other tools used:
 - Express -> Framework
 - Mongoose -> ODM (Object Data Modeling) -->
 
-<img src="[markdownmonstericon.png](https://res.cloudinary.com/clarapardo/image/upload/v1672568941/asana_groove_uhpe9d.bmp)"
+<img src="https://res.cloudinary.com/clarapardo/image/upload/v1672568941/asana_groove_uhpe9d.bmp"
      alt="this.project"
      style="width: 100%; height: 400px" />
 
