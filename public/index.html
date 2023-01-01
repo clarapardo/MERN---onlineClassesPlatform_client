@@ -3,32 +3,30 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" type="image/x-icon"
+    href="https://images.squarespace-cdn.com/content/v1/5af1df2b5417fc39b83e21c2/1612864411439-NX12MFKIIM4LORX0NCNO/favicon.ico?format=100w">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>React App</title>
+  <title>Asana Groove</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root" onmousemove="moveImg(event)" onscroll="moveImgVertically(event)" on></div>
-  <img src='./img/pointer.png' id='gradient' class="gradient-follow" />
+  <div id="root" onmousemove="moveImg(event)"></div>
+  <img src='https://res.cloudinary.com/clarapardo/image/upload/v1672168039/Component_1_x65uux.png' id='gradient'
+    class="gradient-follow" />
 </body>
 
 </html>
 <script>
   function moveImg(event) {
-    var x = event.clientX;
-    var y = event.clientY;
+    var x = event.pageX;
+    var y = event.pageY;
     var shark = document.getElementById("gradient");
     shark.style.left = x + 'px';
     shark.style.top = y + 'px';
-  }
-
-  function moveImgVertically(event) {
-    console.log('holiiiii')
   }
 </script>

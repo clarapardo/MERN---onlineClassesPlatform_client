@@ -3,16 +3,17 @@ body {
 }
 
 .gradient-follow-cursor {
-    width: 500px;
-    height: 300px;
+    width: 800px;
+    height: 700px;
     border: 1px solid black;
     position: absolute;
 }
 
 img.gradient-follow {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 800px;
+    height: 700px;
     z-index: -1;
-    transform: translate(-52%, -51%);
+    transform: translate(-50%, -49%);
+    opacity: 0.8
 }
