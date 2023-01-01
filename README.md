@@ -4,6 +4,11 @@
 This project was done with the aim of **deepen in MongoDB queries**, with multiple variables for searching within the data base.
 <br>
 The theme is a yoga website where multiple classes are being display. The user can directly search the class through the search-bar, or can filter the classes by goal, level, duration, style and/or intensity, as well as sort them by recommended, length, newest or alphabetically.
+<br>
+<img src="/public/asana_groove.bmp"
+     alt="this.project"
+     style="width: 100%; height: 400px" />
+*Based on @asanagroove and @theclassyoga*
 
 Developing this thematic with a **no-SQL DB** made sense because: 
 <br>
@@ -33,8 +38,3 @@ The *frameworks*, *libraries*, and other tools used:
 - Express -> Framework
 - Mongoose -> ODM (Object Data Modeling) -->
 
-<img src="/public/asana_groove.bmp"
-     alt="this.project"
-     style="width: 100%; height: 400px" />
-
-Based on @asanagroove and @theclassyoga
