@@ -32,8 +32,9 @@ The *frameworks*, *libraries*, and other tools used:
 - MongoDB -> DB
 - Express -> Framework
 - Mongoose -> ODM (Object Data Modeling) -->
-![video](https://res.cloudinary.com/clarapardo/video/upload/v1672565943/Asana_Groove_-_Google_Chrome_2023-01-01_10-24-39_naoux0.mp4)
 
-<video width="320" height="240" autoplay muted loop controls src="https://res.cloudinary.com/clarapardo/video/upload/v1672565943/Asana_Groove_-_Google_Chrome_2023-01-01_10-24-39_naoux0.mp4"></video>
+<img src="[markdownmonstericon.png](https://res.cloudinary.com/clarapardo/image/upload/v1672568941/asana_groove_uhpe9d.bmp)"
+     alt="this.project"
+     style="width: 100%; height: 400px" />
 
 Based on @asanagroove and @theclassyoga
