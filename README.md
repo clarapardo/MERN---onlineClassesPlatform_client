@@ -7,7 +7,7 @@ The theme is a yoga website where multiple classes are being display. The user c
 <br>
 <img src="/public/asana_groove.bmp"
      alt="this.project"
-     style="width: 100%; height: 400px" />
+     style="width: 100%; marginTop: 25px" />
 *Based on @asanagroove and @theclassyoga*
 
 Developing this thematic with a **no-SQL DB** made sense because: 
